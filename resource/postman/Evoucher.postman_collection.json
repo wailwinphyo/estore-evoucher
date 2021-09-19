@@ -1,0 +1,480 @@
+{
+	"info": {
+		"_postman_id": "998e91d5-753b-4de7-805d-00a41360935d",
+		"name": "Evoucher",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Token Authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"jame\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/authenticate",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Refresh",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"refreshToken\": \"7697357c-9a1c-4d9f-942a-d65cccd1a386\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/refreshtoken",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"refreshtoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evoucher - create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYW0iLCJpYXQiOjE2MzIwNzc1MjAsImV4cCI6MTYzMjE2MzkyMH0.W8_uB3VPTGeThi9WHC1XnbnIeUBJfnCyJ1D-WUtfP-wh19HVm-zkSnbEwEhTEX7fR6w40jgP14HeGm57BjKwZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Voucher1",
+							"type": "text"
+						},
+						{
+							"key": "expiryDate",
+							"value": "2021-09-18T09:56:27.054Z",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "paymentMethodId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "paymentDiscount",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "500",
+							"type": "text"
+						},
+						{
+							"key": "maxBuyLimit",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "giftPerUserLimit",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/DELL/Pictures/profile.png"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostUrl}}/admin/evouchers",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"admin",
+						"evouchers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evoucher - edit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYW0iLCJpYXQiOjE2MzIwNzc1MjAsImV4cCI6MTYzMjE2MzkyMH0.W8_uB3VPTGeThi9WHC1XnbnIeUBJfnCyJ1D-WUtfP-wh19HVm-zkSnbEwEhTEX7fR6w40jgP14HeGm57BjKwZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Voucher1",
+							"type": "text"
+						},
+						{
+							"key": "expiryDate",
+							"value": "2021-09-18T09:56:27.054+00:00",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						},
+						{
+							"key": "imageUrl",
+							"value": " 9e0d91ad-1046-46f0-960a-8478bfeff69e.png",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "12.0",
+							"type": "text"
+						},
+						{
+							"key": "paymentMethodId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "paymentDiscount",
+							"value": "12.0",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "ACTIVE",
+							"type": "text"
+						},
+						{
+							"key": "maxBuyLimit",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "giftPerUserLimit",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{hostUrl}}/admin/evouchers",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"admin",
+						"evouchers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evoucher - Active Status Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYW0iLCJpYXQiOjE2MzIwNzc1MjAsImV4cCI6MTYzMjE2MzkyMH0.W8_uB3VPTGeThi9WHC1XnbnIeUBJfnCyJ1D-WUtfP-wh19HVm-zkSnbEwEhTEX7fR6w40jgP14HeGm57BjKwZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{hostUrl}}/admin/evouchers/101/status/INACTIVE",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"admin",
+						"evouchers",
+						"101",
+						"status",
+						"INACTIVE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evoucher - list",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW1lIiwiaWF0IjoxNjMyMDI4MTgzLCJleHAiOjE2MzIxMTQ1ODN9.pRg7DuqTvASYwhW9VJ-qmCeoFf2ZRz-CA9hGDkPQVJ7d5adG86O6U3a9fuNVVHBaHW2hH_RqioIPn0E7YhlpEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostUrl}}/api/evouchers",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"api",
+						"evouchers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evoucher - Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW1lIiwiaWF0IjoxNjMyMDI4MTgzLCJleHAiOjE2MzIxMTQ1ODN9.pRg7DuqTvASYwhW9VJ-qmCeoFf2ZRz-CA9hGDkPQVJ7d5adG86O6U3a9fuNVVHBaHW2hH_RqioIPn0E7YhlpEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostUrl}}/api/evouchers/101",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"api",
+						"evouchers",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Payment Methods",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW1lIiwiaWF0IjoxNjMyMDI4MTgzLCJleHAiOjE2MzIxMTQ1ODN9.pRg7DuqTvASYwhW9VJ-qmCeoFf2ZRz-CA9hGDkPQVJ7d5adG86O6U3a9fuNVVHBaHW2hH_RqioIPn0E7YhlpEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostUrl}}/api/paymentmethods",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"api",
+						"paymentmethods"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Evoucher - Check out",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW1lIiwiaWF0IjoxNjMyMDc5OTI1LCJleHAiOjE2MzIxNjYzMjV9.EhVdZD7jx3XSjWkln8goAHUrbvfex1yTJf_S-quL_Tn_Kxk9qjJ1e0vV-VsSHOlrJ9LJ1kVTcg2Z50lKegK9ew",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "evoucherId",
+							"value": "103",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "paymentMethod",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "creditCardNumber",
+							"value": "4012888888881881",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "test",
+							"type": "text"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "09777979965",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{hostUrl}}/api/checkout",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Purchase history",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJqYW1lIiwiaWF0IjoxNjMyMDI4MTgzLCJleHAiOjE2MzIxMTQ1ODN9.pRg7DuqTvASYwhW9VJ-qmCeoFf2ZRz-CA9hGDkPQVJ7d5adG86O6U3a9fuNVVHBaHW2hH_RqioIPn0E7YhlpEA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostUrl}}/api/purchaseHistory",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"api",
+						"purchaseHistory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Promo code",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJTYW0iLCJpYXQiOjE2MzIwNzc1MjAsImV4cCI6MTYzMjE2MzkyMH0.W8_uB3VPTGeThi9WHC1XnbnIeUBJfnCyJ1D-WUtfP-wh19HVm-zkSnbEwEhTEX7fR6w40jgP14HeGm57BjKwZQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{hostUrl}}/api/checkPromocode/801007mluWe",
+					"host": [
+						"{{hostUrl}}"
+					],
+					"path": [
+						"api",
+						"checkPromocode",
+						"801007mluWe"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
