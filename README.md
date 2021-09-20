@@ -13,7 +13,7 @@
 
 | UserType        | Sample Json           |
 | ------------- |:-------------:|
-| Admin         | { "username" : "sam", "password": "12345" } |
+| Admin         | { "username" : "Sam", "password": "12345" } |
 | User          | { "username" : "jame", "password": "12345" }|
 
 ### Admin Apis
