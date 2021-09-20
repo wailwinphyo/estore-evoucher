@@ -10,7 +10,6 @@
 
 ## For Testing APIs
 - For Admin API, it need user with **Role_ADMIN** Role.
-  - The following user has ADMIN Role and use to call ADMIN APIs
 
 | UserType        | Sample Json           |
 | ------------- |:-------------:|
